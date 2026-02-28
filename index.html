@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sherlock Holmes – World's Only Consulting Detective. Portfolio showcasing investigations, forensic research, and published works." />
+  <title>Sherlock Holmes | Consulting Detective</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ── PAGE LOADER ── -->
+  <div id="loader" class="loader">
+    <div class="loader-box">
+      <div class="loader-logo">SH</div>
+      <div class="loader-bar"><div class="loader-prog"></div></div>
+    </div>
+  </div>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-badge">SH</span>
+        <span class="brand-name">Sherlock Holmes</span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <a href="Sample Blank Resume.png" download="Sherlock_Holmes_Resume.png" class="btn-resume">
+          <i class="fas fa-file-download"></i>
+          <span>Resume</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero" class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-avatar-col">
+        <div class="avatar-wrap">
+          <div class="avatar-ring ring-outer"></div>
+          <div class="avatar-ring ring-inner"></div>
+          <div class="avatar-circle">
+            <img src="Sample Profile.jpg" alt="Sherlock Holmes" class="avatar-img" onerror="this.style.display='none'" />
+            <span class="avatar-initials">SH</span>
+          </div>
+          <div class="avatar-badge-available">
+            <span class="pulse-dot"></span> Available for Cases
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-text-col">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Sherlock<br />Holmes</h1>
+        <div class="hero-role-wrap">
+          <span class="role-static">A </span>
+          <span id="typingText" class="typing-text"></span><span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-tagline">Unravelling the world's most perplexing mysteries through observation, deductive reasoning, and the scientific method.</p>
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn btn-primary"><i class="fas fa-briefcase"></i> View Cases</a>
+          <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Hire Me</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/sherlock-holmes" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/sherlockholmes" target="_blank" rel="noopener" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          <a href="mailto:sherlock.holmes@bakerstreet.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+442072243688" aria-label="Phone"><i class="fas fa-phone"></i></a>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <span>Scroll</span>
+      <div class="scroll-line"><div class="scroll-ball"></div></div>
+    </a>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="section">
+    <div class="container">
+      <span class="sec-tag reveal">Get to know me</span>
+      <h2 class="sec-title reveal">About Me</h2>
+
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <p class="about-lead">Highly skilled <strong>Consulting Detective</strong> with a unique ability to solve complex cases. Expert in observation, deductive reasoning, and forensic analysis.</p>
+          <p>Passionate about using scientific methods to uncover the truth. With over two decades consulting for Scotland Yard and private clients, I have developed unparalleled expertise in criminal investigation and evidence analysis.</p>
+          <p>My methodology combines meticulous attention to detail with broad scientific knowledge — enabling me to solve cases that have baffled even the most experienced investigators at Scotland Yard.</p>
+
+          <div class="info-list">
+            <div class="info-row"><i class="fas fa-map-marker-alt"></i><span>221B Baker Street, London, NW1 6XE, United Kingdom</span></div>
+            <div class="info-row"><i class="fas fa-phone"></i><a href="tel:+442072243688">+44 20 7224 3688</a></div>
+            <div class="info-row"><i class="fas fa-envelope"></i><a href="mailto:sherlock.holmes@bakerstreet.com">sherlock.holmes@bakerstreet.com</a></div>
+            <div class="info-row"><i class="fas fa-linkedin"></i><a href="https://www.linkedin.com/in/sherlock-holmes" target="_blank" rel="noopener">linkedin.com/in/sherlock-holmes</a></div>
+            <div class="info-row"><i class="fab fa-x-twitter"></i><a href="https://twitter.com/sherlockholmes" target="_blank" rel="noopener">twitter.com/sherlockholmes</a></div>
+          </div>
+
+          <div class="hobbies-block">
+            <h4>Interests & Hobbies</h4>
+            <div class="chips">
+              <span class="chip"><i class="fas fa-music"></i> Violin Playing</span>
+              <span class="chip"><i class="fas fa-flask"></i> Chemistry</span>
+              <span class="chip"><i class="fas fa-fist-raised"></i> Boxing</span>
+              <span class="chip"><i class="fas fa-bug"></i> Beekeeping</span>
+              <span class="chip"><i class="fas fa-smoking"></i> Tobacco Analysis</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right reveal">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-folder-open"></i></div>
+              <div class="stat-val"><span class="count-up" data-target="1000">0</span><sup>+</sup></div>
+              <div class="stat-lbl">Cases Solved</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-clock"></i></div>
+              <div class="stat-val"><span class="count-up" data-target="23">0</span><sup>+</sup></div>
+              <div class="stat-lbl">Years Experience</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+              <div class="stat-val"><span class="count-up" data-target="100">0</span><sup>%</sup></div>
+              <div class="stat-lbl">Success Rate</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-book-open"></i></div>
+              <div class="stat-val"><span class="count-up" data-target="60">0</span><sup>+</sup></div>
+              <div class="stat-lbl">Publications</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="section alt-bg">
+    <div class="container">
+      <span class="sec-tag reveal">Expertise</span>
+      <h2 class="sec-title reveal">Skills & Capabilities</h2>
+      <div class="skills-layout">
+
+        <div class="skills-bars reveal">
+          <h3>Core Competencies</h3>
+          <div class="skill-row">
+            <div class="skill-hdr"><span>Observation & Deduction</span><span>99%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="99"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-hdr"><span>Problem Solving</span><span>98%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="98"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-hdr"><span>Forensic Analysis</span><span>95%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="95"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-hdr"><span>Chemical Analysis</span><span>93%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="93"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-hdr"><span>Criminal Profiling</span><span>92%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="92"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-hdr"><span>Violin Performance</span><span>90%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="90"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-hdr"><span>Boxing & Baritsu</span><span>86%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="86"></div></div>
+          </div>
+        </div>
+
+        <div class="skills-tools reveal">
+          <h3>Tools & Methods</h3>
+          <div class="tools-grid">
+            <div class="tool-card"><i class="fas fa-microscope"></i><span>Microscopy</span></div>
+            <div class="tool-card"><i class="fas fa-fingerprint"></i><span>Fingerprinting</span></div>
+            <div class="tool-card"><i class="fas fa-dna"></i><span>Chemical Tests</span></div>
+            <div class="tool-card"><i class="fas fa-search-location"></i><span>Crime Scene Analysis</span></div>
+            <div class="tool-card"><i class="fas fa-brain"></i><span>Mind Palace</span></div>
+            <div class="tool-card"><i class="fas fa-user-secret"></i><span>Disguise & Infiltration</span></div>
+            <div class="tool-card"><i class="fas fa-map-marked-alt"></i><span>Geographic Profiling</span></div>
+            <div class="tool-card"><i class="fas fa-pen-fancy"></i><span>Handwriting Analysis</span></div>
+            <div class="tool-card"><i class="fas fa-camera"></i><span>Photography</span></div>
+            <div class="tool-card"><i class="fas fa-lock"></i><span>Lock Picking</span></div>
+            <div class="tool-card"><i class="fas fa-key"></i><span>Cipher & Cryptography</span></div>
+            <div class="tool-card"><i class="fas fa-theater-masks"></i><span>Behavioural Psychology</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE & EDUCATION ── -->
+  <section id="experience" class="section">
+    <div class="container">
+      <span class="sec-tag reveal">My Journey</span>
+      <h2 class="sec-title reveal">Experience & Education</h2>
+
+      <div class="tab-bar reveal">
+        <button class="tab-btn active" data-tab="work">
+          <i class="fas fa-briefcase"></i> Work Experience
+        </button>
+        <button class="tab-btn" data-tab="edu">
+          <i class="fas fa-graduation-cap"></i> Education
+        </button>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="tab-pane active" id="tab-work">
+        <div class="timeline">
+
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-label">Mar 1881 – Apr 1904</span>
+              <div class="tl-head">
+                <h3>Consulting Detective</h3>
+                <span class="tl-badge">Featured</span>
+              </div>
+              <div class="tl-meta">
+                <span><i class="fas fa-building"></i> Self-Employed</span>
+                <span><i class="fas fa-map-marker-alt"></i> London</span>
+              </div>
+              <ul class="tl-list">
+                <li>Provided expert consultation to Scotland Yard on complex criminal cases — the world's only Consulting Detective.</li>
+                <li>Pioneered forensic science methods for solving mysteries, decades ahead of conventional law enforcement.</li>
+                <li>Specialized in high-profile and unusual cases requiring advanced deductive techniques.</li>
+                <li>Maintained comprehensive indexed case records with detailed observations for future investigative reference.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-label">Jan 1876 – Feb 1881</span>
+              <div class="tl-head"><h3>Violinist & Music Instructor</h3></div>
+              <div class="tl-meta">
+                <span><i class="fas fa-building"></i> Self-Employed</span>
+                <span><i class="fas fa-map-marker-alt"></i> London</span>
+              </div>
+              <ul class="tl-list">
+                <li>Performed at prestigious venues across London to wide critical acclaim.</li>
+                <li>Composed original pieces and arrangements, blending classical traditions with improvisational elements.</li>
+                <li>Taught violin to students of various ages and skill levels, maintaining a dedicated roster of pupils.</li>
+                <li>Maintained and repaired violins and other stringed instruments, developing expertise in instrument craftsmanship.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="tab-pane" id="tab-edu">
+        <div class="timeline">
+
+          <div class="tl-item reveal">
+            <div class="tl-dot edu-dot"></div>
+            <div class="tl-card">
+              <span class="tl-label">1874</span>
+              <div class="tl-head"><h3>Bachelor of Science – Chemistry</h3></div>
+              <div class="tl-meta">
+                <span><i class="fas fa-university"></i> University of Cambridge</span>
+                <span><i class="fas fa-map-marker-alt"></i> Cambridge</span>
+              </div>
+              <ul class="tl-list">
+                <li>Studied Chemistry with particular focus on organic compounds and toxicology, graduating with distinction.</li>
+                <li>Conducted independent research on the application of science in criminal investigations, prefiguring modern forensic science.</li>
+                <li>Recognized for exceptional laboratory work and pioneering analytical methodology.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-dot edu-dot"></div>
+            <div class="tl-card">
+              <span class="tl-label">1870</span>
+              <div class="tl-head"><h3>A Levels – Mathematics, Physics &amp; Chemistry</h3></div>
+              <div class="tl-meta">
+                <span><i class="fas fa-school"></i> Eton College</span>
+                <span><i class="fas fa-map-marker-alt"></i> Windsor</span>
+              </div>
+              <ul class="tl-list">
+                <li>Achieved top marks in Mathematics, Physics, and Chemistry, demonstrating exceptional analytical aptitude from an early age.</li>
+                <li>Participated actively in the school's drama and music societies, performing lead roles and violin solos.</li>
+                <li>Founded the school's first informal scientific inquiry club, fostering a lifelong love of empirical investigation.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PORTFOLIO ── -->
+  <section id="portfolio" class="section alt-bg">
+    <div class="container">
+      <span class="sec-tag reveal">My Investigations</span>
+      <h2 class="sec-title reveal">Notable Cases &amp; Projects</h2>
+
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="criminal">Criminal Cases</button>
+        <button class="filter-btn" data-filter="forensic">Forensic Science</button>
+        <button class="filter-btn" data-filter="research">Research</button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <div class="p-card reveal" data-cat="criminal">
+          <div class="p-thumb p-img">
+            <img src="Sample portfolio - Dashboard.webp" alt="Case Management Dashboard" loading="lazy" />
+            <div class="p-overlay"><span class="p-cat-tag">Criminal Investigation</span></div>
+          </div>
+          <div class="p-body">
+            <h3>The Hound of the Baskervilles</h3>
+            <p>Investigated the mysterious death of Sir Charles Baskerville on the Dartmoor moors. Uncovered an elaborate murder plot disguised as a supernatural curse, exposing the villain's use of a phosphorescent-coated hound to terrorise the Baskerville family and secure a vast inheritance. Regarded as one of the most dangerous and complex investigations of my career.</p>
+            <div class="p-tags">
+              <span>Forensic Analysis</span>
+              <span>Crime Scene</span>
+              <span>Deduction</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-card reveal" data-cat="criminal">
+          <div class="p-thumb p-img">
+            <img src="Sample portfolio - Dashboard2.webp" alt="Investigation Analytics Dashboard" loading="lazy" />
+            <div class="p-overlay"><span class="p-cat-tag">Murder Investigation</span></div>
+          </div>
+          <div class="p-body">
+            <h3>A Study in Scarlet</h3>
+            <p>Solved a complex double murder at Lauriston Gardens, tracing the crime to a revenge plot spanning two continents. This was the first case formally documented by Dr. John Watson, showcasing the power of logical deduction in criminal investigations and establishing my reputation with Scotland Yard as an indispensable consultant.</p>
+            <div class="p-tags">
+              <span>Deductive Reasoning</span>
+              <span>Observation</span>
+              <span>Profiling</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-card reveal" data-cat="forensic">
+          <div class="p-thumb p-img">
+            <img src="Sample portfolio - Webapp.webp" alt="Forensic Database Webapp" loading="lazy" />
+            <div class="p-overlay"><span class="p-cat-tag">Forensic Research</span></div>
+          </div>
+          <div class="p-body">
+            <h3>Tobacco Ash Classification System</h3>
+            <p>Developed a comprehensive classification system for 140 varieties of pipe, cigar, and cigarette tobacco. This pioneering forensic work enables investigators to identify tobacco residue at crime scenes, narrowing the suspect pool by smoking habits. Now widely adopted by law enforcement agencies as a standard forensic reference tool.</p>
+            <div class="p-tags">
+              <span>Chemistry</span>
+              <span>Classification</span>
+              <span>Forensic Science</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-card reveal" data-cat="research">
+          <div class="p-thumb p-img">
+            <img src="Sample portfolio - Task Management.webp" alt="Case Management System" loading="lazy" />
+            <div class="p-overlay"><span class="p-cat-tag">Academic Publication</span></div>
+          </div>
+          <div class="p-body">
+            <h3>Upon the Distinction Between the Ashes of Various Tobaccos</h3>
+            <p>Published a landmark monograph detailing the chemical properties and visual characteristics of tobacco ashes from over a hundred different origins. This research pioneered forensic chemistry in criminal investigations and remains a foundational text referenced by modern forensic scientists globally. Presented to the Royal Society of Chemistry in 1883.</p>
+            <div class="p-tags">
+              <span>Forensic Chemistry</span>
+              <span>Publication</span>
+              <span>Methodology</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-card reveal" data-cat="criminal">
+          <div class="p-thumb p-img">
+            <img src="Sample portfolio - Mobile App.webp" alt="Mobile Investigation App" loading="lazy" />
+            <div class="p-overlay"><span class="p-cat-tag">Criminal Investigation</span></div>
+          </div>
+          <div class="p-body">
+            <h3>The Sign of Four</h3>
+            <p>Unravelled the mystery of the Agra treasure and the disappearance of Mary Morstan's father, exposing a four-man conspiracy spanning two decades. The investigation demanded tracking skills, cipher-breaking, and a dramatic river pursuit down the Thames — demonstrating the full breadth of investigative and physical capabilities required in the field.</p>
+            <div class="p-tags">
+              <span>Tracking</span>
+              <span>Cryptography</span>
+              <span>Investigation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-card reveal" data-cat="forensic">
+          <div class="p-thumb p-img">
+            <img src="Sample portfolio - Dashboard.webp" alt="Biometric Analysis Dashboard" loading="lazy" />
+            <div class="p-overlay"><span class="p-cat-tag">Forensic Innovation</span></div>
+          </div>
+          <div class="p-body">
+            <h3>Fingerprint Identification Enhancement</h3>
+            <p>Refined and expanded existing criminal identification systems by incorporating fingerprint analysis and handwriting identification techniques. Developed novel methods for lifting latent prints from challenging surfaces, enabling breakthroughs in multiple cold cases. These innovations significantly advanced Scotland Yard's ability to identify and track repeat offenders across London.</p>
+            <div class="p-tags">
+              <span>Fingerprinting</span>
+              <span>Biometrics</span>
+              <span>Identification</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CERTIFICATES ── -->
+  <section id="certificates" class="section">
+    <div class="container">
+      <span class="sec-tag reveal">Credentials</span>
+      <h2 class="sec-title reveal">Certificates &amp; Achievements</h2>
+
+      <div class="cert-grid">
+
+        <div class="cert-card reveal">
+          <div class="cert-top cert-img-wrap">
+            <img src="Certificate Six Sigma Black Belt.png" alt="Advanced Forensic Science Certificate" loading="lazy" class="cert-thumb" />
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">Royal Society of Chemistry</span>
+            <h3>Advanced Forensic Science</h3>
+            <p>Comprehensive certification in forensic chemistry methods including analysis of poisons, explosives, and biological materials. Achieved distinction in practical examinations — one of only two candidates ever to receive full marks in the hands-on crime scene assessment.</p>
+            <div class="cert-footer">
+              <span><i class="fas fa-calendar-check"></i> Issued 1882</span>
+              <a href="#" class="cert-link">Verify <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-top cert-img-wrap">
+            <img src="Professional_PMP_Certificate.png" alt="Criminal Investigation Methods Certificate" loading="lazy" class="cert-thumb" />
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">Scotland Yard Training Division</span>
+            <h3>Criminal Investigation Methods</h3>
+            <p>Elite-level certification recognizing mastery in criminal investigation procedures, evidence collection, and case management. One of only three civilians ever awarded this certification by Scotland Yard — a testament to extraordinary investigative capability beyond official ranks.</p>
+            <div class="cert-footer">
+              <span><i class="fas fa-calendar-check"></i> Issued 1884</span>
+              <a href="#" class="cert-link">Verify <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-top cert-img-wrap">
+            <img src="Blank Certificate.jpg" alt="Chemical Analysis Certificate" loading="lazy" class="cert-thumb" />
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">University of Cambridge</span>
+            <h3>Chemical Analysis &amp; Toxicology</h3>
+            <p>Specialized certificate in chemical analysis techniques with a focus on toxicological identification. Developed novel testing procedures for detecting rare and exotic poisons — several of which are now standard practice in forensic laboratories across Britain and Europe.</p>
+            <div class="cert-footer">
+              <span><i class="fas fa-calendar-check"></i> Issued 1876</span>
+              <a href="#" class="cert-link">Verify <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-top cert-img-wrap">
+            <img src="Sample Certificate.jpg" alt="Criminology Certificate" loading="lazy" class="cert-thumb" />
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">British Criminological Society</span>
+            <h3>Criminology &amp; Behavioural Analysis</h3>
+            <p>Advanced certification in criminal psychology and behavioural profiling. Pioneered the application of psychological profiling in active criminal investigations, establishing methodologies that preceded modern criminal profiling by several decades. Contributed a landmark paper to the Society's annual journal.</p>
+            <div class="cert-footer">
+              <span><i class="fas fa-calendar-check"></i> Issued 1889</span>
+              <a href="#" class="cert-link">Verify <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-top cert-img-wrap">
+            <img src="Certificate Six Sigma Green Belt.jpg" alt="Baritsu & Boxing Certificate" loading="lazy" class="cert-thumb" />
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">London Boxing Club</span>
+            <h3>Baritsu &amp; Boxing – Expert Level</h3>
+            <p>Expert-level certification in traditional English boxing and Baritsu (Japanese martial arts). This physical training proved instrumental in numerous field operations and self-defence encounters — most notably during the confrontation with Professor Moriarty at the Reichenbach Falls.</p>
+            <div class="cert-footer">
+              <span><i class="fas fa-calendar-check"></i> Issued 1879</span>
+              <a href="#" class="cert-link">Verify <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-top cert-img-wrap">
+            <img src="Blank Certificate.jpg" alt="Violin Performance Certificate" loading="lazy" class="cert-thumb" />
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">Royal Academy of Music</span>
+            <h3>Violin Performance &amp; Composition</h3>
+            <p>Distinguished diploma in violin performance, music theory, and original composition. Recognized for innovative pieces blending classical technique with improvisational flair. Music provides a crucial cognitive reset between complex investigations, facilitating lateral thinking and creative leaps in deduction.</p>
+            <div class="cert-footer">
+              <span><i class="fas fa-calendar-check"></i> Issued 1878</span>
+              <a href="#" class="cert-link">Verify <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ── -->
+  <section class="section alt-bg testimonials">
+    <div class="container">
+      <span class="sec-tag reveal">References</span>
+      <h2 class="sec-title reveal">What People Say</h2>
+
+      <div class="slider-wrap reveal">
+        <div class="slider-track" id="sliderTrack">
+
+          <div class="t-slide">
+            <div class="t-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p>"Holmes is the most extraordinary man I have ever had the privilege of knowing. His powers of observation and deduction are nothing short of miraculous. Working alongside him has been the greatest adventure — and the greatest honour — of my entire career."</p>
+            <div class="t-author">
+              <div class="t-avatar">JW</div>
+              <div class="t-info">
+                <h4>Dr. John H. Watson, M.D.</h4>
+                <span>Medical Practitioner & Author · Self-Employed, London</span>
+                <a href="mailto:john.watson@bakerstreet.com">john.watson@bakerstreet.com · +44 20 7224 3688</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-slide">
+            <div class="t-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p>"In twenty-three years of police work, I have never encountered a mind quite like Holmes's. He has solved more cases in a single afternoon than my best detectives have managed in a month. Scotland Yard owes him an immeasurable debt of gratitude."</p>
+            <div class="t-author">
+              <div class="t-avatar">LG</div>
+              <div class="t-info">
+                <h4>Inspector G. Lestrade</h4>
+                <span>Detective Inspector · Scotland Yard, London</span>
+                <a href="mailto:g.lestrade@scotland-yard.gov.uk">g.lestrade@scotland-yard.gov.uk</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-slide">
+            <div class="t-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p>"On three separate occasions, Mr. Holmes has recovered items of national importance and prevented what could have been catastrophic diplomatic incidents. His discretion, brilliance, and patriotism are beyond question. The Crown is firmly in his debt."</p>
+            <div class="t-author">
+              <div class="t-avatar">MH</div>
+              <div class="t-info">
+                <h4>Mycroft Holmes</h4>
+                <span>Senior Government Official · British Government, Whitehall</span>
+                <a href="mailto:m.holmes@whitehall.gov.uk">m.holmes@whitehall.gov.uk</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-controls">
+          <button class="sl-btn" id="slPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+          <div class="sl-dots" id="slDots"></div>
+          <button class="sl-btn" id="slNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="section">
+    <div class="container">
+      <span class="sec-tag reveal">Get In Touch</span>
+      <h2 class="sec-title reveal">Contact Me</h2>
+
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <h3>Have a Case for Me?</h3>
+          <p>No mystery is too perplexing, no case too unusual. Whether you require private investigation, forensic consultation, or expert testimony — I am at your service. Do not hesitate to reach out at any hour of the day or night.</p>
+
+          <div class="c-list">
+            <a class="c-item" href="https://maps.google.com/?q=221B+Baker+Street+London" target="_blank" rel="noopener">
+              <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div><strong>Address</strong><span>221B Baker Street, London, NW1 6XE, UK</span></div>
+            </a>
+            <a class="c-item" href="tel:+442072243688">
+              <div class="c-icon"><i class="fas fa-phone"></i></div>
+              <div><strong>Phone</strong><span>+44 20 7224 3688</span></div>
+            </a>
+            <a class="c-item" href="mailto:sherlock.holmes@bakerstreet.com">
+              <div class="c-icon"><i class="fas fa-envelope"></i></div>
+              <div><strong>Email</strong><span>sherlock.holmes@bakerstreet.com</span></div>
+            </a>
+          </div>
+
+          <div class="c-socials">
+            <a href="https://www.linkedin.com/in/sherlock-holmes" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/sherlockholmes" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="mailto:sherlock.holmes@bakerstreet.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-right reveal">
+          <form class="contact-form" id="contactForm" action="https://formsubmit.co/sherlock.holmes@bakerstreet.com" method="POST">
+            <input type="hidden" name="_subject" value="New Portfolio Enquiry" />
+            <input type="hidden" name="_captcha" value="false" />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cName">Full Name *</label>
+                <input type="text" id="cName" name="name" placeholder="Dr. John Watson" required />
+              </div>
+              <div class="form-group">
+                <label for="cEmail">Email Address *</label>
+                <input type="email" id="cEmail" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cSubject">Subject *</label>
+              <input type="text" id="cSubject" name="subject" placeholder="Urgent: I have a case for you..." required />
+            </div>
+            <div class="form-group">
+              <label for="cMessage">Message *</label>
+              <textarea id="cMessage" name="message" rows="6" placeholder="Describe your case or inquiry in as much detail as possible..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <p class="form-note">* I typically respond within 24 hours. For urgent matters, please call directly.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-badge">SH</div>
+          <div>
+            <strong>Sherlock Holmes</strong>
+            <span>Consulting Detective</span>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#certificates">Certificates</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/sherlock-holmes" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/sherlockholmes" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="mailto:sherlock.holmes@bakerstreet.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>© 2026 Sherlock Holmes. All rights reserved.</p>
+        <p class="footer-quote">"When you have eliminated the impossible, whatever remains, however improbable, must be the truth."</p>
+      </div>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

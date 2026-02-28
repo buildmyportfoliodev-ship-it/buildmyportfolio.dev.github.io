@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sherlock Holmes – Curriculum Vitae</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Print + Screen styles ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #7d5c0a;
+      --text:   #1c1c2e;
+      --text2:  #4a4a6a;
+      --text3:  #888899;
+      --border: #ddddc8;
+      --bg-side:#2c2c3e;
+      --gold:   #c9a96e;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #e8e6dc;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    /* Print button */
+    .print-bar {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: #1c1c2e; color: #fff;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .6rem 1.5rem; z-index: 100; gap: 1rem;
+      font-size: .85rem;
+    }
+    .print-bar p { color: #9898bb; }
+    .print-bar a {
+      color: #c9a96e; text-decoration: none; font-weight: 600;
+      display: flex; align-items: center; gap: .4rem;
+    }
+    .print-bar a:hover { color: #e8c870; }
+    .print-bar button {
+      background: linear-gradient(135deg,#c9a96e,#e8c870);
+      color: #1c1c2e; border: none; border-radius: 6px;
+      padding: .45rem 1.1rem; font-weight: 700; font-size: .85rem;
+      cursor: pointer; display: flex; align-items: center; gap: .45rem;
+      transition: opacity .2s;
+    }
+    .print-bar button:hover { opacity: .88; }
+
+    /* Resume sheet */
+    .resume {
+      width: 794px; /* A4 approx */
+      background: #fff;
+      box-shadow: 0 8px 40px rgba(0,0,0,.2);
+      display: flex;
+      margin-top: 3.5rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      flex-shrink: 0;
+      background: var(--bg-side);
+      color: #e0e0f0;
+      padding: 2rem 1.25rem;
+      display: flex; flex-direction: column; gap: 1.75rem;
+    }
+
+    .sb-avatar {
+      width: 90px; height: 90px; border-radius: 50%;
+      background: linear-gradient(135deg,#c9a96e,#e8c870);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem; font-weight: 700; color: #fff;
+      margin: 0 auto .25rem;
+      border: 3px solid rgba(201,169,110,.5);
+    }
+    .sb-name-blk { text-align: center; }
+    .sb-name-blk h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; font-weight: 700;
+      color: #fff; line-height: 1.2; margin-bottom: .25rem;
+    }
+    .sb-name-blk p { font-size: .72rem; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: .1em; }
+
+    .sb-section { }
+    .sb-section h3 {
+      font-size: .65rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .15em; color: var(--gold);
+      border-bottom: 1px solid rgba(201,169,110,.3);
+      padding-bottom: .35rem; margin-bottom: .85rem;
+    }
+    .sb-list { display: flex; flex-direction: column; gap: .5rem; }
+    .sb-list li { list-style: none; font-size: .78rem; color: #b8b8d0; display: flex; align-items: flex-start; gap: .45rem; }
+    .sb-list li::before { content: '•'; color: var(--gold); flex-shrink: 0; margin-top: .1em; }
+
+    .sb-contact { display: flex; flex-direction: column; gap: .55rem; }
+    .sb-contact a, .sb-contact span {
+      font-size: .75rem; color: #b8b8d0; text-decoration: none;
+      display: flex; align-items: flex-start; gap: .45rem; word-break: break-word;
+    }
+    .sb-contact a:hover { color: var(--gold); }
+    .sb-contact i { color: var(--gold); width: 14px; flex-shrink: 0; margin-top: 2px; }
+
+    .sb-skill { display: flex; flex-direction: column; gap: .65rem; }
+    .sb-skill-item { }
+    .sb-skill-item span { font-size: .75rem; color: #c0c0d8; display: flex; justify-content: space-between; margin-bottom: .3rem; }
+    .sb-bar { height: 4px; background: rgba(255,255,255,.12); border-radius: 99px; overflow: hidden; }
+    .sb-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg,#c9a96e,#e8c870); }
+
+    /* Main */
+    .main {
+      flex: 1;
+      padding: 2rem 1.75rem;
+      display: flex; flex-direction: column; gap: 1.5rem;
+    }
+    .main-header { border-bottom: 2px solid var(--border); padding-bottom: 1rem; }
+    .main-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; font-weight: 700; color: var(--text);
+      line-height: 1.1; margin-bottom: .2rem;
+    }
+    .main-header .title { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; color: var(--accent); }
+
+    .m-section { }
+    .m-section h2 {
+      font-size: .68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .15em; color: var(--accent);
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: .3rem; margin-bottom: .9rem;
+    }
+    .about-text { font-size: .83rem; color: var(--text2); line-height: 1.65; }
+
+    /* Experience / Education items */
+    .job { margin-bottom: 1.1rem; }
+    .job:last-child { margin-bottom: 0; }
+    .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .25rem; }
+    .job-title { font-family: 'Playfair Display', serif; font-size: .95rem; font-weight: 700; color: var(--text); }
+    .job-date { font-size: .72rem; font-weight: 600; color: var(--accent); white-space: nowrap; }
+    .job-company { font-size: .78rem; color: var(--text3); margin: .15rem 0 .5rem; display: flex; gap: .75rem; }
+    .job-company span { display: flex; align-items: center; gap: .25rem; }
+    .job ul { padding-left: 1rem; }
+    .job li { list-style: disc; font-size: .8rem; color: var(--text2); margin-bottom: .25rem; line-height: 1.55; }
+    .job li::marker { color: var(--accent); }
+
+    /* Skills inline grid */
+    .skills-row { display: grid; grid-template-columns: repeat(2,1fr); gap: .45rem .75rem; }
+    .skill-line { display: flex; justify-content: space-between; align-items: center; font-size: .78rem; }
+    .skill-line span:first-child { color: var(--text2); font-weight: 500; }
+    .skill-line .prog { flex: 1; height: 5px; background: #e8e8e0; border-radius: 99px; margin: 0 .5rem; overflow: hidden; }
+    .skill-line .prog div { height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--accent), #c9a96e); }
+    .skill-line .pct { color: var(--accent); font-weight: 600; width: 2.5em; text-align: right; }
+
+    /* Reference */
+    .ref-grid { display: grid; grid-template-columns: 1fr; gap: .35rem; }
+    .ref-item { font-size: .8rem; }
+    .ref-item strong { color: var(--text); font-weight: 600; }
+    .ref-item span { color: var(--text2); }
+
+    /* Print */
+    @media print {
+      body { background: #fff; padding: 0; }
+      .print-bar { display: none; }
+      .resume { margin: 0; box-shadow: none; width: 100%; }
+    }
+
+    @media (max-width: 820px) {
+      .resume { flex-direction: column; width: 100%; }
+      .sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; gap: 1.25rem; }
+      .sb-avatar, .sb-name-blk { flex: 1 1 100%; }
+      .sb-section { flex: 1 1 45%; min-width: 180px; }
+    }
+  </style>
+  <!-- Font Awesome (icons in resume) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Print bar -->
+  <div class="print-bar">
+    <p>💡 To save as PDF: click <strong>Print → Save as PDF</strong>, or use the button →</p>
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+      <button onclick="window.print()"><i class="fas fa-print"></i> Print / Save PDF</button>
+    </div>
+  </div>
+
+  <!-- ════ RESUME ════ -->
+  <div class="resume">
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="sidebar">
+      <div>
+        <div class="sb-avatar">SH</div>
+        <div class="sb-name-blk">
+          <h2>Sherlock Holmes</h2>
+          <p>Consulting Detective</p>
+        </div>
+      </div>
+
+      <div class="sb-section">
+        <h3>Contact</h3>
+        <div class="sb-contact">
+          <span><i class="fas fa-map-marker-alt"></i>221B Baker Street, London, NW1 6XE, United Kingdom</span>
+          <a href="tel:+442072243688"><i class="fas fa-phone"></i>+44 20 7224 3688</a>
+          <a href="mailto:sherlock.holmes@bakerstreet.com"><i class="fas fa-envelope"></i>sherlock.holmes@bakerstreet.com</a>
+          <a href="https://www.linkedin.com/in/sherlock-holmes" target="_blank"><i class="fab fa-linkedin"></i>in/sherlock-holmes</a>
+          <a href="https://twitter.com/sherlockholmes" target="_blank"><i class="fab fa-x-twitter"></i>@sherlockholmes</a>
+        </div>
+      </div>
+
+      <div class="sb-section">
+        <h3>Core Skills</h3>
+        <div class="sb-skill">
+          <div class="sb-skill-item"><span><span>Observation & Deduction</span><span>99%</span></span><div class="sb-bar"><div class="sb-fill" style="width:99%"></div></div></div>
+          <div class="sb-skill-item"><span><span>Problem Solving</span><span>98%</span></span><div class="sb-bar"><div class="sb-fill" style="width:98%"></div></div></div>
+          <div class="sb-skill-item"><span><span>Forensic Analysis</span><span>95%</span></span><div class="sb-bar"><div class="sb-fill" style="width:95%"></div></div></div>
+          <div class="sb-skill-item"><span><span>Chemical Analysis</span><span>93%</span></span><div class="sb-bar"><div class="sb-fill" style="width:93%"></div></div></div>
+          <div class="sb-skill-item"><span><span>Violin Performance</span><span>90%</span></span><div class="sb-bar"><div class="sb-fill" style="width:90%"></div></div></div>
+          <div class="sb-skill-item"><span><span>Boxing & Baritsu</span><span>86%</span></span><div class="sb-bar"><div class="sb-fill" style="width:86%"></div></div></div>
+        </div>
+      </div>
+
+      <div class="sb-section">
+        <h3>Tools & Methods</h3>
+        <ul class="sb-list">
+          <li>Microscopy &amp; Lab Analysis</li>
+          <li>Fingerprint Identification</li>
+          <li>Crime Scene Investigation</li>
+          <li>Handwriting Analysis</li>
+          <li>Geographic &amp; Criminal Profiling</li>
+          <li>Cipher &amp; Cryptography</li>
+          <li>Photography &amp; Documentation</li>
+          <li>Disguise &amp; Undercover Work</li>
+        </ul>
+      </div>
+
+      <div class="sb-section">
+        <h3>Hobbies</h3>
+        <ul class="sb-list">
+          <li>Violin Playing</li>
+          <li>Chemistry Experiments</li>
+          <li>Boxing</li>
+          <li>Beekeeping</li>
+          <li>Tobacco Analysis</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="main">
+
+      <div class="main-header">
+        <div class="title">Curriculum Vitae</div>
+        <h1>Sherlock<br/>Holmes</h1>
+      </div>
+
+      <div class="m-section">
+        <h2>About Me</h2>
+        <p class="about-text">Highly skilled Consulting Detective with a unique ability to solve complex cases. Expert in observation, deductive reasoning, and forensic analysis. Passionate about using scientific methods to uncover the truth. With over two decades consulting for Scotland Yard and private clients, I have developed unparalleled expertise in criminal investigation, evidence analysis, and logical deduction.</p>
+      </div>
+
+      <div class="m-section">
+        <h2>Work Experience</h2>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Consulting Detective</span>
+            <span class="job-date">Mar 1881 – Apr 1904</span>
+          </div>
+          <div class="job-company">
+            <span><i class="fas fa-building" style="color:#7d5c0a"></i> Self-Employed</span>
+            <span><i class="fas fa-map-marker-alt" style="color:#7d5c0a"></i> London</span>
+          </div>
+          <ul>
+            <li>Provided expert consultation to Scotland Yard on complex criminal cases — the world's only Consulting Detective.</li>
+            <li>Pioneered forensic science methods decades ahead of conventional law enforcement practice.</li>
+            <li>Specialized in high-profile cases requiring advanced deductive and scientific techniques.</li>
+            <li>Maintained comprehensive indexed case records with detailed notes and observations.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Violinist &amp; Music Instructor</span>
+            <span class="job-date">Jan 1876 – Feb 1881</span>
+          </div>
+          <div class="job-company">
+            <span><i class="fas fa-building" style="color:#7d5c0a"></i> Self-Employed</span>
+            <span><i class="fas fa-map-marker-alt" style="color:#7d5c0a"></i> London</span>
+          </div>
+          <ul>
+            <li>Performed at prestigious venues across London; composed original pieces and arrangements.</li>
+            <li>Taught violin to students of various ages and skill levels, maintaining a dedicated pupil roster.</li>
+            <li>Maintained and repaired violins and other stringed instruments.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="m-section">
+        <h2>Education</h2>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Bachelor of Science – Chemistry</span>
+            <span class="job-date">1874</span>
+          </div>
+          <div class="job-company">
+            <span><i class="fas fa-university" style="color:#7d5c0a"></i> University of Cambridge, Cambridge</span>
+          </div>
+          <ul>
+            <li>Studied Chemistry with focus on organic compounds and toxicology; graduated with distinction.</li>
+            <li>Conducted independent research on the application of science in criminal investigations.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">A Levels – Mathematics, Physics &amp; Chemistry</span>
+            <span class="job-date">1870</span>
+          </div>
+          <div class="job-company">
+            <span><i class="fas fa-school" style="color:#7d5c0a"></i> Eton College, Windsor</span>
+          </div>
+          <ul>
+            <li>Achieved top marks in Mathematics, Physics, and Chemistry.</li>
+            <li>Active in drama and music societies; founded the school's first scientific inquiry club.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="m-section">
+        <h2>Key Achievements &amp; Certifications</h2>
+        <ul class="sb-list" style="color:#4a4a6a;gap:.4rem;display:flex;flex-direction:column;">
+          <li style="font-size:.82rem;list-style:disc;list-style-position:inside;color:#4a4a6a;">Advanced Forensic Science Certificate – Royal Society of Chemistry (1882)</li>
+          <li style="font-size:.82rem;list-style:disc;list-style-position:inside;color:#4a4a6a;">Criminal Investigation Methods Certification – Scotland Yard Training Division (1884)</li>
+          <li style="font-size:.82rem;list-style:disc;list-style-position:inside;color:#4a4a6a;">Chemical Analysis &amp; Toxicology Certificate – University of Cambridge (1876)</li>
+          <li style="font-size:.82rem;list-style:disc;list-style-position:inside;color:#4a4a6a;">Criminology &amp; Behavioural Analysis – British Criminological Society (1889)</li>
+          <li style="font-size:.82rem;list-style:disc;list-style-position:inside;color:#4a4a6a;">Violin Performance &amp; Composition Diploma – Royal Academy of Music (1878)</li>
+          <li style="font-size:.82rem;list-style:disc;list-style-position:inside;color:#4a4a6a;">Solved 1,000+ criminal cases; 100% success rate; consulted on cases for the British Crown</li>
+        </ul>
+      </div>
+
+      <div class="m-section">
+        <h2>Reference</h2>
+        <div class="ref-grid">
+          <div class="ref-item">
+            <strong>Dr. John H. Watson, M.D.</strong><br/>
+            <span>Self-Employed, London &nbsp;·&nbsp; T: +44 20 7224 3688 &nbsp;·&nbsp; E: john.watson@bakerstreet.com</span>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>
